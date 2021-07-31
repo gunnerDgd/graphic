@@ -2,39 +2,30 @@
 
 graphic::gui::window::window   (point_2d_int& w_pos         , point_2d_int& w_size,
                                 int32_t       w_border_width, window      * w_parent)
-                                : window_position(w_pos),
-                                  window_size    (w_size)
-{
-    window_parent  = (!w_parent) ? XDefaultRootWindow() 
-                                 : w_parent->native_handle().first;
+                                : window_position(w_pos) ,
+                                  window_size    (w_size),
 
-    
-    window_handle  = XCreateWindow(window_display     , window_parent      ,
-                                   std::get<0>(w_pos) , std::get<1>(w_pos) ,
-                                   std::get<0>(w_size), std::get<1>(w_size),
-                                   w_border_width     ,
-                                   InputOutput        , // Fixed Value.
-                                   TrueColor          , // Fixed Value.
-                                   0                  ,
-                                   
-                                   );
-    XMapWindow                    (window_display, window_handle);
+{
+    GET_DISPLAY_HANDLE(window_handle)  = XOpenDisplay       (nullptr);
+    GET_WINDOW_HANDLE (window_handle)  = XCreateSimpleWindow(EXTRACT_HANDLE(window_handle)            ,
+                                                             EXTRACT_2DIPOS(w_pos)                    ,
+                                                             EXTRACT_2DIPOS(w_size)                   ,
+                                                             w_border_width                           ,
+                                                             BlackPixel(EXTRACT_HANDLE(window_handle)),  // Default Pixel Value
+                                                             WhitePixel(EXTRACT_HANDLE(window_handle))); // Default Pixel Value
+
+    window_parent                      = (!w_parent) ? XDefaultRootWindow(GET_DISPLAY_HANDLE(window_handle)) 
+                                                     : GET_WINDOW_HANDLE (w_parent->native_handle());
 }
 
-bool graphic::gui::window::show()
+void graphic::gui::window::show()
 {
-    XMapWindow(window_handle.second, window_handle.first);
+    XMapWindow(EXTRACT_HANDLE(window_handle));
     XFlush    ();
 }
 
-void graphic::gui::window::set_window_size(point_2d_int& ws)
-{
-    XWindowChanges ws_change;
+void graphic::gui::window::set_window_size    (point_2d_int& ws) { XResizeWindowSize(EXTRACT_HANDLE(window_handle), EXTRACT_2DIPOS(ws)); window_size     = ws; }
+void graphic::gui::window::set_window_position(point_2d_int& wp) { XMoveWindow      (EXTRACT_HANDLE(window_handle), EXTRACT_2DIPOS(ws)); window_position = wp; }
 
-    ws_change.width  = std::get<0>(ws);
-    ws_change.height = std::get<1>(ws);
-
-    XConfigureWindow(window_handle.second, window_handle.first, 
-                     CWWidth | CWHeight  , &ws_change        );
-}
-const point_2d_int& graphic::gui::window::get_window_size() { return window_size; }
+void graphic::gui::window::set_border_pixmap    (pixmap& px)     { XSetWindowBorderPixmap    (EXTRACT_HANDLE(window_handle), px); }
+void graphic::gui::window::set_background_pixmap(pixmap& px)     { XSetWindowBackgroundPixmap(EXTRACT_HANDLE(window_handle), px); }

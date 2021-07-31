@@ -1,0 +1,3 @@
+[submodule "buildtool-glut"]
+	path = buildtool-glut
+	url = https://github.com/gunnerDgd/FreeGLUT-Built.git

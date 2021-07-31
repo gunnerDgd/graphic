@@ -1,3 +1,5 @@
+#pragma once
+
 #include <X11/X.h>
 #include <X11/xlib.h>
 
@@ -7,8 +9,9 @@ namespace graphic {
 namespace gui     {
 
 #ifdef ENVIRONMENT_UNIX
-    using window_handle_t  = Window ;
-    using display_handle_t = Display;
+    using window_handle_t = std::pair<Window, Display*>;
+    using pixmap_t        = Pixmap;
+
 #elif  ENVIRONMENT_WINDOWS
     using window_handle_t = HANDLE;
 #endif

@@ -1,35 +1,44 @@
 #pragma once
 #include <graphics/listener/mouse/mouse.hpp>
+#include <future>
 
 namespace graphics::window::listener {
-	template <typename ButtonInfo>
+	template <typename ButtonMapped>
 	class mouse::button
 	{
+		template <std::uint16_t IndexId> class __button_event;
 	public:
 		using	   native_message = MSG;
-		using	   event_map	  = ButtonInfo;
-		enum class events		  : UINT
-		{ 
-			clicked		   = event_map::clicked		  ,
-			released	   = event_map::released	  ,
-			double_clicked = event_map::double_clicked
-		};
-
+		using	   button_map	  = ButtonMapped;
+		struct	   position		   { std::uint16_t x, y; };
+		
 	public:
-		events operator()();
+		using clicked		 = __button_event<button_map::index_value>;
+		using double_clicked = __button_event<button_map::index_value + 1>;
+		using released		 = __button_event<button_map::index_value + 2>;
+	};
 
-	private:
-		mouse& __M_event_source;
+	template <typename ButtonMapped>
+	template <std::uint16_t IndexId>
+	class mouse::button<ButtonMapped>::__button_event
+	{
+		static constexpr std::uint16_t index = IndexId;
+		friend class mouse;
+		using		 event_type = std::future<MSG>;
+					 event_type  __M_mouse_event;
+	public:
+		button::position operator()();
 	};
 }
 
-template <typename ButtonInfo>
-typename graphics::window::listener::mouse::button<ButtonInfo>::events
-		 graphics::window::listener::mouse::button<ButtonInfo>::operator()()
+template <typename ButtonMapped>
+template <std::uint16_t IndexId>
+typename graphics::window::listener::mouse::button<ButtonMapped>::position
+		 graphics::window::listener::mouse::button<ButtonMapped>::__button_event<IndexId>::operator()()
 {
-	native_message mouse_msg;
-	GetMessage   (&mouse_msg, __M_event_source.__M_parent_window, event_map::filter_begin, 
-																  event_map::filter_max) ;
-
-	return static_cast<events>(mouse_msg.message);
+					  __M_mouse_event.wait();
+	MSG evt_message = __M_mouse_event.get ();
+	
+	return position { evt_message.lParam & 0xFFFF, 
+					  evt_message.lParam >> 16}  ;
 }

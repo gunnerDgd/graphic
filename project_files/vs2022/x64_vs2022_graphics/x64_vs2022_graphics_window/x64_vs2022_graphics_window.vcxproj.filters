@@ -13,13 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\frame">
+      <UniqueIdentifier>{cab79d4a-f374-4071-a28c-80f1cf863e84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\graphics\category.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\frame.hpp">
+      <Filter>Header Files\frame</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\frame.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\frame_base.hpp">
+      <Filter>Header Files\frame</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\declare.hpp">
+      <Filter>Header Files\frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher.hpp">
+      <Filter>Header Files\frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\frame_configuration.hpp">
+      <Filter>Header Files\frame</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\frame\frame_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\frame\frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\frame\frame_dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

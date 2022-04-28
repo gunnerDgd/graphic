@@ -1,57 +1,46 @@
 #pragma once
-#include <Windows.h>
-#include <cstdint>
-
-#include <thread>
+#include <graphics/listener/mouse/mouse_map.hpp>
+#include <future>
 
 namespace graphics::window::listener {
 	class mouse
 	{
 	public:
 		using native_handle_type = HWND;
+		using thread_id			 = std::uint32_t;
+		class message_slot
+		{
+			friend class mouse;
+			using		 event_type = std::promise<MSG>;
+						 event_type __M_msgslot_event  ;
+		
+		public:
+			template <typename MouseReceiver> mouse& operator+=(MouseReceiver&&);
+		};
 	public:
-		template <typename ButtonInfo>
-		class  button  ;
-		class  wheel   ;
-		class  movement;
+		template <typename ButtonMapped> class button  ;
+										 class wheel   ;
+										 class movement;
 
-		struct left_button_info ;
-		struct right_button_info;
-
-		using  left  = button<left_button_info> ;
-		using  right = button<right_button_info>;
-
+		using left  = button<details::lbutton_map>;
+		using right = button<details::rbutton_map>;
+		
 	public:
-		template <typename WindowType>
-		mouse(WindowType&& wnd) : __M_parent_window(wnd.native_handle()) {}
+		thread_id thread_domain();
+		void      dispatch	   ();
 
 	private:
 		native_handle_type __M_parent_window;
-	};
+		message_slot	   __M_mouue_event_slot[6];
+	};	
+}
 
-	struct mouse::left_button_info
-	{
-		using					event_type				  = std::uint16_t   ;
-		using					filter_type				  = std::uint16_t   ;
+template <typename MouseReceiver> 
+graphics::window::listener::mouse&
+graphics::window::listener::mouse::message_slot::operator+=(MouseReceiver&& rcv)
+{
+	std::uint16_t							   rcv_index  = std::remove_reference_t<MouoseReceiver>::index;
+	rcv.__M_mouse_event = __M_mouue_event_slot[rcv_index].__M_msgslot_event.get_future();
 
-		static inline constexpr event_type  clicked		   = WM_LBUTTONDOWN  ;
-		static inline constexpr event_type  released	   = WM_LBUTTONUP	 ;
-		static inline constexpr event_type  double_clicked = WM_LBUTTONDBLCLK;
-		
-		static inline constexpr filter_type filter_begin   = 0x201			 ;
-		static inline constexpr filter_type filter_end     = 0x203			 ;
-	};
-
-	struct mouse::right_button_info
-	{
-		using					event_type				   = std::uint16_t   ;
-		using					filter_type				   = std::uint16_t   ;
-
-		static inline constexpr event_type  clicked		   = WM_RBUTTONDOWN  ;
-		static inline constexpr event_type  released	   = WM_RBUTTONUP	 ;
-		static inline constexpr event_type  double_clicked = WM_RBUTTONDBLCLK;
-
-		static inline constexpr filter_type filter_begin   = 0x204			 ;
-		static inline constexpr filter_type filter_end     = 0x206			 ;
-	};
+	return *this;
 }

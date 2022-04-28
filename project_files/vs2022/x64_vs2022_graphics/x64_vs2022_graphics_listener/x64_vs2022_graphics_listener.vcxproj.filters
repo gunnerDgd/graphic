@@ -13,21 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\mouse">
+      <UniqueIdentifier>{7567bd32-d1f2-4516-bf8b-ceb2863c4816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\message">
+      <UniqueIdentifier>{0963f84e-10d2-4fca-92cc-9f20671326c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mouse\events">
+      <UniqueIdentifier>{4258f963-2a6c-483f-ab01-a7b78f2e787e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mouse">
+      <UniqueIdentifier>{1620702b-897f-4ca4-9374-5e3059535f4d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse.hpp">
+      <Filter>Header Files\mouse</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_button.hpp">
+      <Filter>Header Files\mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_wheel.hpp">
+      <Filter>Header Files\mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\message\message.hpp">
+      <Filter>Header Files\message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\message\message_filter.hpp">
+      <Filter>Header Files\message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_map.hpp">
+      <Filter>Header Files\mouse</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="x64_vs2022_graphics_listener.cpp">
+    <ClCompile Include="..\..\..\..\source\listener\message\message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse.cpp">
+      <Filter>Source Files\mouse</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

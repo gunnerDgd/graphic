@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x64_vs2022_graphics_window", "x64_vs2022_graphics_window\x64_vs2022_graphics_window.vcxproj", "{F5AF8525-E91D-4345-A80A-6BA5937C7FA4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x64_vs2022_graphics_listener", "x64_vs2022_graphics_listener\x64_vs2022_graphics_listener.vcxproj", "{8C013393-C7CC-4885-B65C-EB6143BA6CE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F5AF8525-E91D-4345-A80A-6BA5937C7FA4}.Release|x64.Build.0 = Release|x64
 		{F5AF8525-E91D-4345-A80A-6BA5937C7FA4}.Release|x86.ActiveCfg = Release|Win32
 		{F5AF8525-E91D-4345-A80A-6BA5937C7FA4}.Release|x86.Build.0 = Release|Win32
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Debug|x64.ActiveCfg = Debug|x64
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Debug|x64.Build.0 = Debug|x64
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Debug|x86.ActiveCfg = Debug|Win32
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Debug|x86.Build.0 = Debug|Win32
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Release|x64.ActiveCfg = Release|x64
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Release|x64.Build.0 = Release|x64
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Release|x86.ActiveCfg = Release|Win32
+		{8C013393-C7CC-4885-B65C-EB6143BA6CE9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

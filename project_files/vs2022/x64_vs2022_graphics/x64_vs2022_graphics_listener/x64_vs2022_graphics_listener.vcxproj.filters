@@ -22,6 +22,9 @@
     <Filter Include="Header Files\mouse\details">
       <UniqueIdentifier>{4258f963-2a6c-483f-ab01-a7b78f2e787e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\mouse\details">
+      <UniqueIdentifier>{89c4a9cc-201e-4c4e-aeda-17a19d1b54c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse.hpp">
@@ -33,13 +36,16 @@
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\wheel.hpp">
       <Filter>Header Files\mouse</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_map.hpp">
-      <Filter>Header Files\mouse</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\movement.hpp">
       <Filter>Header Files\mouse</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\message_slot.hpp">
+      <Filter>Header Files\mouse\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\mouse_map.hpp">
+      <Filter>Header Files\mouse\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\event_slot.hpp">
       <Filter>Header Files\mouse\details</Filter>
     </ClInclude>
   </ItemGroup>

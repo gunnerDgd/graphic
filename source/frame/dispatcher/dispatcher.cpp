@@ -1,7 +1,13 @@
-#include <graphics/frame/dispatcher.hpp>
+#include <graphics/frame/dispatcher/dispatcher.hpp>
 	
 graphics::window::frame::dispatcher:: dispatcher(const frame& fr_source) : __M_disp_frame(fr_source) {  }
 graphics::window::frame::dispatcher::~dispatcher()													 {  }
+
+graphics::window::details::dispatch_slot& 
+graphics::window::frame::dispatcher::operator[](index idx)
+{
+	return __M_disp_frame_msgslot[static_cast<std::underlying_type_t<index>>(idx)];
+}
 
 typename graphics::window::frame::dispatcher::native_message 
 		 graphics::window::frame::dispatcher::dispatch()

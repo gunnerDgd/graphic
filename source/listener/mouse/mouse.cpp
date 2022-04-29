@@ -1,12 +1,12 @@
 #include <graphics/listener/mouse/mouse.hpp>
 
-typename graphics::window::listener::mouse::thread_id 
-		 graphics::window::listener::mouse::thread_domain() { return GetCurrentThreadId(); }
-
-void     graphics::window::listener::mouse::dispatch()
+typename graphics::window::messaging::system_message 
+		 graphics::window::listener::mouse::get()
 {
-	MSG		    msg_recv;
-	GetMessage(&msg_recv, 0, WM_MOUSEFIRST, WM_MOUSELAST);
+	return messaging::system_message::get(messaging::mouse_only);
+}
 
+void graphics::window::listener::mouse::dispatch(messaging::system_message& msg)
+{
 	
 }

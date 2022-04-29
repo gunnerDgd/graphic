@@ -42,9 +42,10 @@ void    graphics::window::messaging::system_message::post(system_message& msg)
 			    msg.__M_message.lParam);
 }
 
-void    graphics::window::messaging::system_message::post(std::thread& recv_thread, system_message& msg)
+void    graphics::window::messaging::system_message::post(domain::thread_domain& domain, system_message& msg)
 {
-	PostThreadMessage(GetThreadId(recv_thread.native_handle()), msg.__M_message.message, 
-																msg.__M_message.wParam , 
-															    msg.__M_message.lParam);
+	if (!domain) return;
+	PostThreadMessage(domain.identifier(), msg.__M_message.message,
+										   msg.__M_message.wParam , 
+										   msg.__M_message.lParam);
 }

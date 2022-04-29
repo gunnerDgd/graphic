@@ -20,15 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\frame\declare.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher\dispatcher.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher\dispatch_slot.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\frame\frame.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\frame\frame_base.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\frame\frame_configuration.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\frame\dispatcher\dispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\source\frame\dispatcher\dispatch_slot.cpp" />
     <ClCompile Include="..\..\..\..\source\frame\frame.cpp" />
     <ClCompile Include="..\..\..\..\source\frame\frame_base.cpp" />
-    <ClCompile Include="..\..\..\..\source\frame\frame_dispatcher.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

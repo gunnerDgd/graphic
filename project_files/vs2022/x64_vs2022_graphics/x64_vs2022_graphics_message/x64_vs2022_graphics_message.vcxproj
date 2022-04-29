@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\message\declare.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\domain\thread_domain.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\message\filter\filter.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\message\filter\range.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\message\message_index.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\message\system_message.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\message\domain\thread_domain.cpp" />
     <ClCompile Include="..\..\..\..\source\message\system_message.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

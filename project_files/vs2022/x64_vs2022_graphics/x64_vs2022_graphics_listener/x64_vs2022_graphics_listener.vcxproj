@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\event_slot.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\message_slot.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\mouse_map.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\button.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_map.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\movement.hpp" />
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\wheel.hpp" />
   </ItemGroup>

@@ -10,8 +10,8 @@ namespace graphics::window::messaging::filter {
 	struct filter<ranged_filter<Begin, End>>
 	{
 		friend class graphics::window::messaging::system_message;
-		using			 range		   = ranged_filter<Begin, End>;
-		using			 target_handle = HWND;
+		using			 range					  = ranged_filter<Begin, End>;
+		using			 target_handle			  = HWND;
 		static constexpr target_handle all_handle = 0;
 
 		filter(target_handle target = 0) : __M_filter_hwnd(target) {  }

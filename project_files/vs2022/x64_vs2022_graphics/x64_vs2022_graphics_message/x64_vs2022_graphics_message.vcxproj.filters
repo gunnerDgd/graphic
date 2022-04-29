@@ -16,6 +16,12 @@
     <Filter Include="Header Files\filter">
       <UniqueIdentifier>{33ac6770-b1e9-4ace-b669-4866b93ccefa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\domain">
+      <UniqueIdentifier>{e4bf234a-5192-41ce-b0ff-21ebe50dd5f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\domain">
+      <UniqueIdentifier>{0c9aa09c-11e2-4054-82c1-f744678e54e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\message\system_message.hpp">
@@ -33,10 +39,16 @@
     <ClInclude Include="..\..\..\..\include\graphics\message\declare.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\message\domain\thread_domain.hpp">
+      <Filter>Header Files\domain</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\source\message\system_message.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\message\domain\thread_domain.cpp">
+      <Filter>Source Files\domain</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

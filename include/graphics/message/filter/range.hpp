@@ -14,3 +14,9 @@ namespace graphics::window::messaging::filter {
 	using mouse_only    = ranged_filter<WM_MOUSEFIRST, WM_MOUSELAST>;
 	using keyboard_only = ranged_filter<WM_KEYFIRST  , WM_KEYLAST>  ;
 }
+
+namespace graphics::window::messaging {
+	inline constexpr filter::all		   all		    {};
+	inline constexpr filter::mouse_only    mouse_only   {};
+	inline constexpr filter::keyboard_only keyboard_only{};
+}

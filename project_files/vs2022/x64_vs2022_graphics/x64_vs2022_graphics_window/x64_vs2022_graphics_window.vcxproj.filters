@@ -16,6 +16,12 @@
     <Filter Include="Header Files\frame">
       <UniqueIdentifier>{cab79d4a-f374-4071-a28c-80f1cf863e84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\frame\dispatcher">
+      <UniqueIdentifier>{238aecc7-0083-4d83-95b8-cfc3d8ce1369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dispatcher">
+      <UniqueIdentifier>{fe6d5704-4e7b-41df-accf-5223ac890869}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\frame\frame.hpp">
@@ -27,11 +33,14 @@
     <ClInclude Include="..\..\..\..\include\graphics\frame\declare.hpp">
       <Filter>Header Files\frame</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher.hpp">
-      <Filter>Header Files\frame</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\include\graphics\frame\frame_configuration.hpp">
       <Filter>Header Files\frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher\dispatcher.hpp">
+      <Filter>Header Files\frame\dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\frame\dispatcher\dispatch_slot.hpp">
+      <Filter>Header Files\frame\dispatcher</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,8 +50,11 @@
     <ClCompile Include="..\..\..\..\source\frame\frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\source\frame\frame_dispatcher.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\..\..\source\frame\dispatcher\dispatcher.cpp">
+      <Filter>Source Files\dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\frame\dispatcher\dispatch_slot.cpp">
+      <Filter>Source Files\dispatcher</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

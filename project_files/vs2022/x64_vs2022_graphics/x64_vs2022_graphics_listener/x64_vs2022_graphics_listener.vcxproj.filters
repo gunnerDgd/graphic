@@ -16,41 +16,41 @@
     <Filter Include="Header Files\mouse">
       <UniqueIdentifier>{7567bd32-d1f2-4516-bf8b-ceb2863c4816}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\message">
-      <UniqueIdentifier>{0963f84e-10d2-4fca-92cc-9f20671326c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\mouse\events">
-      <UniqueIdentifier>{4258f963-2a6c-483f-ab01-a7b78f2e787e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\mouse">
       <UniqueIdentifier>{1620702b-897f-4ca4-9374-5e3059535f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mouse\details">
+      <UniqueIdentifier>{4258f963-2a6c-483f-ab01-a7b78f2e787e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse.hpp">
       <Filter>Header Files\mouse</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_button.hpp">
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\button.hpp">
       <Filter>Header Files\mouse</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_wheel.hpp">
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\wheel.hpp">
       <Filter>Header Files\mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\message\message.hpp">
-      <Filter>Header Files\message</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\message\message_filter.hpp">
-      <Filter>Header Files\message</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_map.hpp">
       <Filter>Header Files\mouse</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\movement.hpp">
+      <Filter>Header Files\mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\message_slot.hpp">
+      <Filter>Header Files\mouse\details</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\listener\message\message.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\source\listener\mouse\mouse.cpp">
+      <Filter>Source Files\mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse_wheel.cpp">
+      <Filter>Source Files\mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse_movement.cpp">
       <Filter>Source Files\mouse</Filter>
     </ClCompile>
   </ItemGroup>

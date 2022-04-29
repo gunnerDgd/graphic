@@ -1,0 +1,43 @@
+﻿  message.cpp
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\message\message.hpp(5,25): error C2653: 'global_dispatcher': is not a class or namespace name
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(3,38): error C3083: 'message': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(3,47): error C3083: 'index': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(3,54): error C3083: 'category_t': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(3,66): error C2039: 'type': is not a member of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\message\message_filter.hpp(5): message : see declaration of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4,32): error C3083: 'message': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4,41): error C2039: '[]': is not a member of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\message\message_filter.hpp(5): message : see declaration of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4,51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4,51): error C2146: syntax error: missing ';' before identifier '[]'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4,52): error C2653: 'index': is not a class or namespace name
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(5,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(5,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(9,38): error C3083: 'message': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(9,47): error C3083: 'index': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(9,54): error C3083: 'operation_code_t': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(9,72): error C2039: 'type': is not a member of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\message\message_filter.hpp(5): message : see declaration of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,32): error C3083: 'message': the symbol to the left of a '::' must be a type
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,41): error C2039: '[]': is not a member of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\message\message_filter.hpp(5): message : see declaration of 'graphics::window::listener'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,4): error C2086: 'int type': redefinition
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(4): message : see declaration of 'type'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,51): error C2146: syntax error: missing ';' before identifier '[]'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(10,52): error C2653: 'index': is not a class or namespace name
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(11,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\message\message.cpp(11,1): error C2447: '{': missing function header (old-style formal list?)
+  mouse.cpp
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(46,62): error C3861: 'MouoseReceiver': identifier not found
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(19,43): message : This diagnostic occurred in the compiler generated function 'void graphics::window::listener::mouse::message_slot::operator =(MouseReceiver &&)'
+  mouse_movement.cpp
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(46,62): error C3861: 'MouoseReceiver': identifier not found
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(19,43): message : This diagnostic occurred in the compiler generated function 'void graphics::window::listener::mouse::message_slot::operator =(MouseReceiver &&)'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\mouse\mouse_movement.cpp(11,42): warning C4244: '=': conversion from 'LPARAM' to 'uint16_t', possible loss of data
+  mouse_wheel.cpp
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(46,62): error C3861: 'MouoseReceiver': identifier not found
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\include\graphics\listener\mouse\mouse.hpp(19,43): message : This diagnostic occurred in the compiler generated function 'void graphics::window::listener::mouse::message_slot::operator =(MouseReceiver &&)'
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\mouse\mouse_wheel.cpp(11,39): warning C4244: '=': conversion from 'LPARAM' to 'uint16_t', possible loss of data
+C:\Users\MinusOne\Projects\Experiment\synapse-graphics\source\listener\mouse\mouse_wheel.cpp(12,45): warning C4244: '=': conversion from 'WPARAM' to 'uint16_t', possible loss of data
+  Generating Code...

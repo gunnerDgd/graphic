@@ -1,7 +1,5 @@
 #include <graphics/listener/mouse/mouse.hpp>
 
-
-
 typename graphics::window::listener::mouse::thread_id 
 		 graphics::window::listener::mouse::thread_domain() { return GetCurrentThreadId(); }
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,23 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\details\message_slot.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\button.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\mouse_map.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\movement.hpp" />
-    <ClInclude Include="..\..\..\..\include\graphics\listener\mouse\wheel.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\declare.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\filter\filter.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\filter\range.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\message_index.hpp" />
+    <ClInclude Include="..\..\..\..\include\graphics\message\system_message.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse.cpp" />
-    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse_movement.cpp" />
-    <ClCompile Include="..\..\..\..\source\listener\mouse\mouse_wheel.cpp" />
+    <ClCompile Include="..\..\..\..\source\message\system_message.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8c013393-c7cc-4885-b65c-eb6143ba6ce9}</ProjectGuid>
-    <RootNamespace>x64vs2022graphicslistener</RootNamespace>
+    <ProjectGuid>{1cd3c441-bc98-4d94-a6d8-906ff0f816f7}</ProjectGuid>
+    <RootNamespace>x64vs2022graphicsmessage</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -136,7 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>

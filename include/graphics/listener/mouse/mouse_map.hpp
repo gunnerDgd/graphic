@@ -20,4 +20,12 @@ namespace graphics::window::listener::details {
 		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, released	   , WM_RBUTTONUP)
 		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, double_clicked, WM_RBUTTONDBLCLK)
 	};
+
+	struct wheel_map
+	{
+		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, index_value   , 3)
+		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, clicked	   , WM_MBUTTONDOWN)
+		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, released	   , WM_MBUTTONUP)
+		GRAPHICS_WINDOW_LISTENER_MOUSE_STATIC(std::uint16_t, double_clicked, WM_MBUTTONDBLCLK)
+	};
 }

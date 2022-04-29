@@ -1,5 +1,8 @@
 #pragma once
 #include <graphics/frame/frame.hpp>
+#include <graphics/message/system_message.hpp>
+#include <graphics/message/filter/filter.hpp>
+
 #include <thread>
 
 #define GRAPHICS_WINDOW_DISPATCHER_HELPER(name, parent, id)   struct name : public parent { static inline constexpr std::uint16_t value = id; };
@@ -64,12 +67,7 @@ template <typename CompareExec>
 typename graphics::window::frame::dispatcher::native_message 
 		 graphics::window::frame::dispatcher::dispatch_if(CompareExec&& comp)
 {
-	native_message    msg_recv;
-	if (!comp(msg_recv))
-		return msg_recv;
-	
-	GetMessage      (&msg_recv, __M_disp_frame.__M_frame_base.__M_fbase_handle, 0, 0);
-	TranslateMessage(&msg_recv);
+	messaging::system_message msg_recv = messaging::system_message::get();
 	
 	GRAPHICS_WINDOW_DISPATCHER_POST_IF(__M_disp_frame_msgslot[__mouse::value]   .__M_slot_thread, msg_recv, WM_MOUSEFIRST, WM_MOUSELAST)
 	GRAPHICS_WINDOW_DISPATCHER_POST_IF(__M_disp_frame_msgslot[__keyboard::value].__M_slot_thread, msg_recv, WM_KEYFIRST  , WM_KEYLAST)
